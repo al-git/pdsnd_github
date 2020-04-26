@@ -12,6 +12,10 @@ months = ['january', 'february', 'march', 'april', 'may', 'june', 'july',
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
         'sunday']
 
+def query_time(start_time):
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -114,8 +118,7 @@ def time_stats(df):
     print('\nMost common START HOUR: ' + df['start hour'].mode()
     .to_string(index=False).strip())
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    query_time(start_time)
 
 
 def station_stats(df):
@@ -136,8 +139,7 @@ def station_stats(df):
     print((df['Start Station'] + ', ' + df['End Station']).mode()
     .to_string(index=False).strip())
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    query_time(start_time)
 
 
 def trip_duration_stats(df):
@@ -153,8 +155,7 @@ def trip_duration_stats(df):
     print('\nMEAN travel time [grr, so mean!]: ' +
     str(df['Trip Duration'].mean()))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    query_time(start_time)
 
 
 def user_stats(df):
@@ -181,8 +182,8 @@ def user_stats(df):
     except:
         pass
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    query_time(start_time)
+
 
 def display_data(df):
     s_index = 0
