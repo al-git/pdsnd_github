@@ -18,6 +18,13 @@ def query_time(start_time):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
+def sleep(seconds):
+    """Concise replacement for time.sleep()"""
+    
+    time.sleep(seconds)
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -29,7 +36,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    time.sleep(.5)
+    sleep(.5)
     while True:
         city = input('What CITY do you want to explore?\n').lower()
         if city in CITY_DATA:
@@ -38,13 +45,13 @@ def get_filters():
             print('Sorry that is not a valid CITY. Please choose among the ' +
             'following:')
             for x in CITY_DATA.keys():
-                time.sleep(.2)
+                sleep(.2)
                 print('- ' + x.title())
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        time.sleep(.5)
+        sleep(.5)
         month = input('What MONTH do you want to explore?\n').lower()
         if month in months:
             break
@@ -52,13 +59,13 @@ def get_filters():
             print('Sorry that is not a valid MONTH. Please choose among the ' +
             'following:')
             for x in months:
-                time.sleep(.2)
+                sleep(.2)
                 print('- ' + x.title())
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        time.sleep(.5)
+        sleep(.5)
         day = input('What DAY do you want to explore?\n').lower()
         if day in days:
             break
@@ -66,7 +73,7 @@ def get_filters():
             print('Sorry that is not a valid DAY. Please choose among the ' +
             'following:')
             for x in days:
-                time.sleep(.2)
+                sleep(.2)
                 print('- ' + x.title())
 
     print('-'*40)
@@ -190,12 +197,12 @@ def user_stats(df):
 def display_data(df):
     s_index = 0
     while True:
-        time.sleep(.5)
+        sleep(.5)
         prompt = input('Do you want to see raw data? Enter yes or no.\n')
         if prompt.lower() == 'yes':
             print(df.iloc[s_index:s_index+5])
             while True:
-                time.sleep(.5)
+                sleep(.5)
                 re_prompt = input('Do you want to see more raw data? '
                 + 'Enter yes or no.\n')
                 if re_prompt.lower() == 'yes':
