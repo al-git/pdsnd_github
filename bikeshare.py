@@ -13,6 +13,8 @@ days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
         'sunday']
 
 def query_time(start_time):
+    """Calculates query run-time and prints section separator"""
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
