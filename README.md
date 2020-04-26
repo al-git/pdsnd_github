@@ -1,15 +1,28 @@
 ### Date created
-Include the date you created this project and README file.
+4/26/2020
 
 ### Project Title
-Replace the Project Title
+ALarson_pdsnd_git
 
 ### Description
-Describe what your project is about and what it does
+A demonstration of git command usage
 
 ### Files used
-Include the files used
+/data
+new-york-city.csv
+washington.csv
+chicago.csv
+bikshare.py
+.gitignore
+README.md
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Forked repository: https://github.com/udacity/pdsnd_github
+
+Various pages and posts referenced from the following:
+https://udacity.github.io/git-styleguide/
+
+https://stackoverflow.com/
+
+https://classroom.udacity.com/nanodegrees/nd104/parts/912d84b6-bf81-4311-8e00-b3b2f63dc965
 
